@@ -44,14 +44,29 @@ figure {
   left: 0;
   top: 25vh;
 }
-
-img {
+figure img {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #fff;
+  font-family: "orbitron";
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
