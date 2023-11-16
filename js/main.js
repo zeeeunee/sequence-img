@@ -19,13 +19,16 @@ for (let i = 0; i < imgNum; i++) {
 
 frame.innerHTML = tags;
 
+const imgs = frame.querySelectorAll('img');
+
 frame.addEventListener('mousemove', (e) => {
 	const { pageX } = e;
 
 	//백분율 공식: 현재수치값 /전체수치값 *100;
 	const percent = parseInt(pageX / window.innerWidth) * imgNum;
-
 	//parseInt('숫자') : 인수로 전달된 값의 소수점 아래를 버리고 정수로 변환
 	//parseFloat('숫자') : 인수로 전달된 값의 소수점까지 포함한 실수로 반환
-	console.log(percent);
+
+	imgs.forEach((img) => (img.style.visivility = 'hidden'));
+	imgs[percent].style.visibility = 'visible';
 });
